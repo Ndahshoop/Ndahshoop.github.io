@@ -1,0 +1,278 @@
+index.html
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Toko Sembako Online</title>
+            <link rel="stylesheet" href="styles.css">
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Store",
+                "name": "Toko Sembako Online",
+                "image": "https://i.ibb.co/8DYhkL0/NDAH.png",
+                "url": " https://adendaaljanna.github.io/Ndahshoop/",
+                "telephone": "+628997680705",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Jl. nanas No. 2",
+                    "addressLocality": "Rajeg",
+                    "addressRegion": "Tangerang",
+                    "postalCode": "15540",
+                    "addressCountry": "ID"
+                },
+                "openingHours": "Mo-Su 08:00-20:00",
+                "sameAs": [
+                    "https://www.facebook.com/tokosembakoonline",
+                    "https://www.instagram.com/tokosembakoonline"
+                ]
+                
+            }
+        
+
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #ff7043;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        header nav ul li {
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+        }
+        section h2 {
+            color: #ff7043;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+        .product-item {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius:8px;
+        }
+        .product-item h3 {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .product-item p {
+            margin: 0.5rem 0;
+            color: #ff7043;
+            font-weight: bold;
+        }
+        .product-item button {
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .product-item button:hover {
+            background-color: #e64a19;
+        }
+        .cart {
+            margin-top: 2rem;
+        }
+        .cart table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .cart table, .cart th, .cart td {
+            border: 1px solid #ddd;
+        }
+        .cart th, .cart td {
+            padding: 10px;
+            text-align: center;
+        }
+        .cart th {
+            background-color: #ff7043;
+            color: white;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.ibb.co.com/8DYhkL0/NDAH.png" alt="NDAH" border=auto; style="width: auto; height:auto; display: block; margin: 0 auto;">
+        <h1>Selamat Datang di Ndahshoop</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#cart">Keranjang</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Tentang Kami</h2>
+            <p>Kami menyediakan berbagai kebutuhan sembako berkualitas dengan harga terjangkau.</p>
+        </section>
+        <section id="products">
+            <h2>Produk Kami</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnIv1CjyvCbbNa53Z6k6YVttrb7mNfZLsRBg&s.jpg" alt="Beras Premium">
+                    <h3>Beras Premium</h3>
+                    <p>Rp70.000/5kg</p>
+                    <button onclick="addToCart('Beras Premium', 70000)">Tambahkan ke Keranjang</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://th.bing.com/th/id/OIP.9RU_gDQVzQZfJUZ9i0zALwAAAA?w=245&h=184&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Minyak Goreng">
+                    <h3>Minyak Goreng</h3>
+                    <p>Rp20.000/liter</p>
+                    <button onclick="addToCart('Minyak Goreng', 20000)">Tambahkan ke Keranjang</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://th.bing.com/th/id/OIP.pHyVBapi9kQB30Bjn5_fWAHaEj?w=252&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Telur Ayam">
+                    <h3>Telur Ayam</h3>
+                    <p>Rp30.000/kg</p>
+                    <button onclick="addToCart('Telur Ayam', 30000)">Tambahkan ke Keranjang</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://th.bing.com/th/id/OIP.ULWNjsgIrq7PADwqVqKKCQHaFp?w=284&h=216&c=7&r=0&o=5&dpr=1.5&pid=1.7.jpg" alt="Gula Pasir">
+                    <h3>Gula Pasir</h3>
+                    <p>Rp15.000/kg</p>
+                    <button onclick="addToCart('Gula Pasir', 15000)">Tambahkan ke Keranjang</button>
+                </div>
+            </div>
+        </section>
+        <section id="cart">
+            <h2>Keranjang Belanja</h2>
+            <div class="cart">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produk</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <tr>
+                            <td colspan="4">Keranjang kosong</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="checkoutButton" onclick="openPaymentModal()" style="margin-top:20px; background: #ff7043; color:white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Lanjutkan ke Pembayaran</button>
+
+<script>
+    function openPaymentModal() {
+        if (cart.length === 0) {
+            alert("Keranjang belanja masih kosong!");
+            return;
+        }
+
+        // Membuat pesan yang akan dikirim ke WhatsApp
+        let cartDetails = cart.map(item => `${item.product} x${item.quantity} - Rp${(item.price * item.quantity).toLocaleString()}`).join('%0A');
+        const phoneNumber = "628997680705"; // Ganti dengan nomor WhatsApp yang sesuai
+        const message = encodeURIComponent(`Halo, saya ingin melanjutkan pembayaran. Berikut adalah detail keranjang belanja saya:%0A%0A${cartDetails}`);
+
+        // Membuka WhatsApp
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+        window.open(whatsappUrl, "_blank");
+    }
+</script>
+</div>
+        </section>
+        <section id="contact">
+            <h2>Hubungi Kami</h2>
+            <p class="contact-phone">Telepon: <a href="tel:+628997680705">+628997680705</a></p>
+            <p>Email: info@tokosembakoonline.com</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Toko Sembako Online. All rights reserved.</p>
+    </footer>
+    <script>
+        
+        const cart = [];
+
+        function addToCart(product, price) {
+            const existingProduct = cart.find(item => item.product === product);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({ product, price, quantity: 1 });
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<tr><td colspan="4">Keranjang kosong</td></tr>';
+                return;
+            }
+
+            cart.forEach(item => {
+                const total = item.price * item.quantity;
+                const row = `<tr>
+                    <td>${item.product}</td>
+                    <td>Rp${item.price.toLocaleString()}</td>
+                    <td>${item.quantity}</td>
+                    <td>Rp${total.toLocaleString()}</td>
+                </tr>`;
+                cartItems.innerHTML += row;
+            });
+        }
+        
+    </script>
+</body>
+</html>
